@@ -41,7 +41,7 @@ On peut annuler ces ajouts avec la commande `git reset [FILE]` ou `git reset` po
 - On **push** son commit sur la branche voulue du repository distant avec la commande `git push origin main`.
 
 ### Les branches
-En général, quand on ajoute une feature, on créé une nouvelle branche sur le repository avec la commande `git branch [BRANCH NAME]`. Ensuite, pour travailler sur la branche nouvellement créée et plus sur la branche *main*, on utilise la commande `git checkout [BRANCH NAME]`. On peut ensuite **pusher** la branche créée localement sur le repository distant avec `git push -u origin [BRANCH NAME]`.
+En général, quand on ajoute une feature, on créé une nouvelle branche sur le repository avec la commande `git branch [BRANCH NAME]`. Ensuite, pour travailler sur la branche nouvellement créée et non plus sur la branche *main*, on utilise la commande `git checkout [BRANCH NAME]`. On peut ensuite **pusher** la branche créée localement sur le repository distant avec `git push -u origin [BRANCH NAME]`.
 
 Une fois que l'on a terminé de développer la nouvelle feature sur la branche, on souhaite généralement la **merger** avec la branche **main**. Les étapes d'un merge sont les suivantes :
 - On se replace sur la branche **main** avec `git checkout main`.
