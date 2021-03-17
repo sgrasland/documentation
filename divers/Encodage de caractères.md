@@ -1,1 +1,0 @@
-## Encodage de caractères
