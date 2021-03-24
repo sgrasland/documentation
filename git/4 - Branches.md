@@ -6,7 +6,6 @@ Une fois que l'on a terminé de développer la nouvelle feature sur la branche, 
 - On **pull** pour se mettre à jour avec `git pull origin main`.
 - On **merge** les deux branches avec `git merge [BRANCH NAME]`.
 - On **push** le résultat du merge avec `git push origin master`.
-- On **delete** enfin la branche créée spécifiquement pour la feature avec `git branch -D [BRANCH NAME]` (ou `git push [URL REMOTE REPOSITORY] --delete [BRANCH NAME]` si la branche a été poussée sur le repository distant)
 
 La commande `git branch --merged` permet de visualiser les branches qui ont été mergées avec la branche courante. On peut enfin supprimer la branche créée temporairement pour le développement de la feature avec :
 - Pour le repository local : `git branch -d [BRANCH NAME]`.
