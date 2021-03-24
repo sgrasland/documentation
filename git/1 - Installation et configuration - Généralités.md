@@ -33,7 +33,7 @@ Pour obtenir des informations sur les branches des repository distant et local :
 
 ## Installation et configuration
 
-# Les 3 arborescences
+### Les 3 arborescences
 
 Git peut-être représenté sous la forme d'un gestionnaire de contenu de 3 **arborescences** différentes (comprendre **collections de fichiers**) :
 - Le **HEAD** : Représente la **dernière validation** effectuée sur la branche actuelle. C'est un **pointeur sur le dernier commit effectué** sur cette branche.
