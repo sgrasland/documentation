@@ -1,6 +1,6 @@
 # `git revert`
 
-Nouveau commit pour annuler des commits précédents.
+Permet d'**annuler** des commits via un nouveau commit. Par exemple `git revert HEAD~3` permet d'annuler les 3 derniers commits via l'exécution d'un nouveau commit. L'intéret est de ne pas modifier **l'historique des commits** lorsque l'on **push** sur le repository distant.
 
 
 # `git reset`
