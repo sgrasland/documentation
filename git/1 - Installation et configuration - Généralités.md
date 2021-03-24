@@ -31,3 +31,10 @@ Pour obtenir des informations sur les branches des repository distant et local :
 
 *nb : Le mot-clé **origin** dans les commandes git signifie qu'on effectue une opération avec le repository distant à partir duquel on a cloné notre repository local.*
 
+## Installation et configuration
+
+# Les 3 arborescences
+
+Git peut-être représenté sous la forme d'un gestionnaire de contenu de 3 **arborescences** différentes (comprendre **collections de fichiers**) :
+- Le **HEAD** : Représente la **dernière validation** effectuée sur la branche actuelle. C'est un **pointeur sur le dernier commit effectué** sur cette branche.
+- L'**Index** : Représente le **prochain commit**. C'est à dire tout ce qui sera validé si on exécute la commande `git commit`.
