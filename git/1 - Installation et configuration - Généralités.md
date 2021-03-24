@@ -38,3 +38,4 @@ Pour obtenir des informations sur les branches des repository distant et local :
 Git peut-être représenté sous la forme d'un gestionnaire de contenu de 3 **arborescences** différentes (comprendre **collections de fichiers**) :
 - Le **HEAD** : Représente la **dernière validation** effectuée sur la branche actuelle. C'est un **pointeur sur le dernier commit effectué** sur cette branche.
 - L'**Index** ou **Staging area** : Représente le **prochain commit**. C'est à dire tout ce qui sera validé si on exécute la commande `git commit`. C'est à dire toutes les modifications ajoutées par `git add`.
+- Le **Working directory** : Représente le contenu actuel du répertoire de travail.
