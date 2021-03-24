@@ -31,7 +31,7 @@ Pour obtenir des informations sur les branches des repository distant et local :
 
 *nb : Le mot-clé **origin** dans les commandes git signifie qu'on effectue une opération avec le repository distant à partir duquel on a cloné notre repository local.*
 
-## Installation et configuration
+## Généralités
 
 ### Les 3 arborescences
 
