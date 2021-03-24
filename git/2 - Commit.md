@@ -1,5 +1,5 @@
 ## Etapes d'un commit
-![alt text](https://github.com/sgrasland/documentation/blob/main/git/resources/git_steps.png "Etapes d'un commit")
+![Etapes d'un commit](https://github.com/sgrasland/documentation/blob/main/git/resources/git_steps.png "Etapes d'un commit")
 - On commence par vérifier quelles sont les modifications que l'on est sur le point d'ajouter avec la commande `git diff`.
 - On ajoute nos modifications dans la **staging area** (i.e l'**Index**) avec la commande `git add [FILE]` ou `git add -A` pour ajouter d'un seul coup toutes nos modifications. On peut vérifier les **changements prêts à être commités** avec la commande `git status`.
 On peut annuler ces ajouts avec la commande `git reset [FILE]` ou `git reset` pour annuler tous les ajouts d'un seul coup. `git status` permet encore une fois de vérifier la bonne prise en compte.
