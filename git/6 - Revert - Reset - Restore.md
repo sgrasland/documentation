@@ -1,10 +1,8 @@
-## Annulation de changements
-
-### `git revert`
+## `git revert`
 
 Nouveau commit pour annuler des commits précédents.
 
-### `git reset`
+## `git reset`
 
 Permet de modifier l'état d'une ou de plusieurs des **3 arborescences** (i.e *HEAD*, *Index* et *Working directory*) pour la/les ramener à l'état d'un commit donné. Sans option particulière, la commande `git reset` est l'opposé de la commande `git add`.
 
