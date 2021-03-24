@@ -1,4 +1,4 @@
-### Annulation de changements
+## Annulation de changements
 
 - **`git-revert`** : Nouveau commit pour annuler des commits précédents.
 
