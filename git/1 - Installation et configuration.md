@@ -1,7 +1,7 @@
-# Introduction
+## Introduction
 Contrairement à SVN, Git est un système de contrôle de version **distribué** alors que SVN est **centralisé**. Cela signifie que lorsque le repository local Git est synchronisé avec un repository distant, il contient exactement les mêmes informations.
 
-### Installation et configuration
+## Installation et configuration
 Installation :
 `sudo apt-get install git`
 
