@@ -1,6 +1,7 @@
 # `git revert`
 
 Nouveau commit pour annuler des commits précédents.
+</br></br></br></br>
 
 # `git reset`
 
