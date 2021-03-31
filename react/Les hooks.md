@@ -60,3 +60,27 @@ useEffect(
 ```
 Si le tableau des dépendances est vide, alors **useEffect** n'est exécuté qu'à l'initialisation du composant.
 
+## useContext
+
+**useContext** permet de transmettre des données entre les composants sans passer par leurs **props**.</br>
+Exemple :
+```
+const moods = {
+  happy: ':D',
+  sad : ':('
+}
+
+const MoodContext = createContext(moods);
+
+function App(props) {
+  return (
+    <MoodContext.Provider value={moods.happy}>
+      <MoodElement />    
+    </MoodContext.Provider>
+  )
+}
+
+function MoodElement() {
+  const mood = useContext(MoodContext); // Valeur récupérée du provider parent le plus proche
+}
+```
