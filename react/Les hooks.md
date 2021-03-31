@@ -84,3 +84,42 @@ function MoodElement() {
   const mood = useContext(MoodContext); // Valeur récupérée du provider parent le plus proche
 }
 ```
+## useRef
+
+**useRef** renvoie un objet qui va exister pendant la durée de vie du composant. Quand sa valeur change, le composant **n'est pas redessiné**.
+On accède à la valeur courante de l'objet via la propriété **.current**. Le paramètre de **useRef()** est sa valeur initiale.</br>
+Exemple :
+
+```
+function App() {
+
+  const compteur = useRef({count: 0})
+  
+  const handleClick = () => {
+    compteur.current.count++
+    console.log(compteur)
+  }
+  
+  return <div>
+    <button onClick={handleClick} >Incrémenter le compteur</button>
+  </div>
+}
+```
+
+Le cas d'utilisation le plus courant est de **récupérer un élément HTML du DOM** :
+
+```
+function App() {
+
+  const input = useRef(null)
+  
+  const handleClick = () => {
+    console.log(input.current.value)
+  }
+  
+  return <div>
+    <input type='text' ref={input} />
+    <button onClick={handleClick} >Loguer la valeur</button>
+  </div>
+}
+```
