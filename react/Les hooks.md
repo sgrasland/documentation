@@ -164,6 +164,23 @@ function App() {
 }
 ```
 
+## useMemo
+
+Ce hook permet d'améliorer les performances de son appli en mettant en cache des résultats de fonctions. **useMemo** prend en second argument un tableau des dépendances pour que le calcul ne soit fait que quand certaines conditions sont réunies. </br>
+Exemple :
+
+```
+function App() {
+
+  const [count, setCount] = useState(0);
+  
+  const expensiveCount = useMemo(() => {
+    return count ** 2;
+  }, [count])
+  
+  return [...]
+}
+```
 
 # Les hooks de React Router
 
