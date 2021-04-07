@@ -182,10 +182,72 @@ function App() {
 }
 ```
 
+## useCallback
+
+Lorsqu'on définit une fonction dans un composant en React, un objet **fonction** est créé à chaque fois que le composant est redessiné. Un moyen d'éviter cela est d'utiliser le hook **useCallback** qui va mémoriser la fonction et ne pas recréer d'objet à chaque redessin du composant. Un cas d'utilisation classique est lorsque l'on souhaite passer la même fonction à plusieurs composants enfants.</br>
+Exemple :
+
+```
+function App() {
+
+  const [count, setCount] = useState(0);
+  
+  const showCount = useCallback(() => {
+    alert(`Count ${count}`);
+  }, [count])
+  
+  
+  return <SomeChild handler={showCount} />
+}
+```
+
 # Les hooks de React Router
+
+Avant **React Router 5**, les propriétés **match**, **location** et **history** étaient passées implicitement aux composants **React Router**. Depuis la version 5, ce n'est plus le cas et il faut utiliser les hooks pour y accéder.
 
 ## useHistory
 
-## useParam
+Permet d'accéder à la propriété **history** de **React Router** et d'utiliser ses fonctions ([*cf documentation de **React Router***](https://reactrouter.com/web/api/)) comme par exemple **push** :</br>
+
+```
+function HomeButton() {
+  let history = useHistory();
+
+  function handleClick() {
+    history.push('/home');
+  }
+
+  return (
+    <button type="button" onClick={handleClick}>
+      Go home
+    </button>
+  );
+}
+```
 
 ## useLocation
+
+Permet d'accéder à la propriété **location** de **React Router** qui représente l'URL courante. On peut par exemple obtenir les **query params** de la façon suivante :</br>
+ ```
+ const location = useLocation();
+ const queryParams = location.search;
+ ```
+
+## useParams
+
+Permet d'accéder à la propriété **match.params** de **React Router** qui représente les paramètres de l'URL courante. Par exemple :</br>
+
+```
+<Route path="/:id/about">
+ <About />
+</Route>
+
+function About() {
+ const { id } = useParams();
+ return (
+  <div>
+   <h2>Now showing post {id}</h2>
+  </div>
+ );
+}
+```
