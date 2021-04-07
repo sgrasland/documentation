@@ -124,6 +124,47 @@ function App() {
 }
 ```
 
+## useReducer
+
+**useReducer** permet d'appliquer la logique de **Redux** au **state** du composant. Contrairement au hook **useState** qui permet de modifier directement le **state** du composant, **useReducer** va **dispatcher** une action qui sera traitée par un **reducer** pour modifier le **state**.</br>
+**useReducer** renvoie un tableau à deux éléments qui sont :
+1. La nouvelle valeur du **state** après passage dans le hook
+2. La fonction permettant de **dispatcher** une action
+
+Et prend deux paramètres :
+
+1. La fonction **reducer** à utiliser 
+2. La valeur par défaut du state
+
+`const [state, dispatch] = useReducer(reducerFunction, initialStateValue)`
+</br></br>
+Exemple :
+
+```
+function myReducer(state, action) {
+  switch(action.type) {
+    case 'increment':
+      return state + 1;
+    case 'decrement':
+      return state - 1;
+    default:
+      throw new Error();
+  }
+}
+
+function App() {
+
+  const [state, dispatch] = useReducer(myReducer, 0);
+   
+  return <div>
+    Count : {state}
+    <button onClick={() => dispatch({type: 'decrement'})}> - </button>
+    <button onClick={() => dispatch({type: 'increment'})}> + </button>
+  </div>
+}
+```
+
+
 # Les hooks de React Router
 
 ## useHistory
