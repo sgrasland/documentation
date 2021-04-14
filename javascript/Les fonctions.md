@@ -1,10 +1,16 @@
 
-# Syntaxes
+# Syntaxes de déclaration
 
 On peut utiliser plusieurs syntaxes pour déclarer une fonction javascript :
 
 ```
 function maFonction(mesArguments) {
+  
+}
+```
+> nb : La syntaxe précédente permet d'utiliser la fonction avant qu'elle ne soit définie dans le fichier .js
+```
+const maFonction = function(mesArguments) {
   
 }
 ```
