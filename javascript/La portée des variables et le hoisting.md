@@ -34,3 +34,10 @@ a = "toto"
 ```
 Et affichera *undefined* dans la console (mais ne fera pas d'erreur).
 >Nb : cela explique pourquoi les fonctions définies sous la forme **var test = function () {...}** renvoient *undefined is not a function* si on les exécute avant de les avoir déclarées.
+
+# Const et Let
+Depuis ES6, il existe les mot-clés **const** et **let** en plus de **var** pour déclarer des variables.
+## Const
+Le mot-clé **const** permet de déclarer une variable **constante** qui ne pourra pas être réassignée.
+## Let
+Le mot-clé **let** permet de déclarer une variable dont **la portée est limitée au bloc qui la contient**.
