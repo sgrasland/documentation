@@ -18,3 +18,18 @@ var demo = function() {
 demo()
 ```
 Affichera *toto* dans la console.
+
+# Le hoisting
+Il s'agit du fait que les variables déclarées dans un fichier .js sont *hissées* en début de fichier lors de l'exécution.</br>
+Ainsi, l'exemple suivant :
+```
+console.log(a)
+var a = "toto"
+```
+Correspond en réalité à :
+```
+var a
+console.log(a)
+a = "toto"
+```
+Et affichera *undefined* dans la console (mais ne fera pas d'erreur).
