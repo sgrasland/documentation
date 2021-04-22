@@ -33,4 +33,4 @@ console.log(a)
 a = "toto"
 ```
 Et affichera *undefined* dans la console (mais ne fera pas d'erreur).
->Nb : cela explique pourquoi <a href="https://github.com/sgrasland/documentation/blob/main/javascript/Les%20fonctions.md">les fonctions définies sous la forme **function test() {...}** </a> renvoient *undefined is not a function*.
+>Nb : cela explique pourquoi <a href="https://github.com/sgrasland/documentation/blob/main/javascript/Les%20fonctions.md">les fonctions définies sous la forme **var test = function () {...}** </a> renvoient *undefined is not a function*.
