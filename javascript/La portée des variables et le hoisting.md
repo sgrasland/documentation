@@ -20,7 +20,7 @@ demo()
 Affichera *toto* dans la console.
 
 # Le hoisting
-Il s'agit du fait que les variables déclarées dans un fichier .js sont *hissées* en début de fichier lors de l'exécution.</br>
+Il s'agit du fait que les variables et les fonctions (uniquement sous la forme **function test () {...}**) déclarées dans un fichier .js sont *hissées* en début de fichier lors de l'exécution.</br>
 Ainsi, l'exemple suivant :
 ```
 console.log(a)
