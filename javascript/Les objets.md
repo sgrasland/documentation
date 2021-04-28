@@ -129,3 +129,28 @@ On pourra alors utiliser :
 jean.leveLaMain()
 pierre.leveLaMain()
 ```
+
+## En résumé
+
+Généralement, on utilisera la syntaxe suivante pour faire de l'héritage en javascript :
+
+
+```
+var Eleve = function(nom, notes) {
+  this.nom = nom,
+  this.notes = notes,
+}
+
+Eleve.prototype.moyenne = function () {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const sommeNotes = this.notes.reduce(reducer)
+  console.log("Ma moyenne est de " + sommeNotes/this.notes.length)
+}
+
+Eleve.prototype.leveLaMain = function () {
+  console.log(this.nom + " lève la main !")
+}
+
+var jean = new Eleve("Jean", [10, 20])
+var pierre = new Eleve("Pierre", [12, 16])
+```
