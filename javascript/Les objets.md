@@ -111,3 +111,21 @@ fonctionne et renvoie :
 Ma moyenne est de 15
 Ma moyenne est de 14
 ```
+
+On pourrait également définir la classe `Eleve`, **qui est en réalité une fonction**, en utilisant l'attribut `prototype` des **fonctions** javascript. 
+> Nb : L'attribut `prototype` d'une fonction javascript est un objet contenant un attribut `constructor` qui représente la fonction elle-même.
+
+On peut utiliser l'attribut `prototype`de la fonction `Eleve` pour définir une nouvelle méthode accessible par tous les objets instanciés à partir d'`Eleve` de la façon suivante :
+
+```
+Eleve.prototype.leverLaMain = function () {
+  console.log(this.nom + " lève la main !")
+}
+```
+
+On pourra alors utiliser :
+
+```
+jean.leveLaMain()
+pierre.leveLaMain()
+```
