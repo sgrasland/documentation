@@ -61,4 +61,8 @@ Ma moyenne est de 14
 A noter qu'en pratique **on n'utilisera jamais directement cette méthode pour faire de l'héritage en javascript**.
 
 ## L'héritage en pratique
-Pour faire de l'héritage en javascript, on n'utilisera **jamais directement** l'attribut `__proto__`. On utilise plutôt la méthode `Object.create()` comme illustré par l'exemple suivant :
+En pratique, pour faire de l'héritage en javascript, il existe plusieurs méthodes.
+
+### `Object.create()`
+
+L'exemple suivant illustre comment utiliser `Object.create()` pour faire de l'héritage :
