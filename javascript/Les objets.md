@@ -84,3 +84,30 @@ fonctionne et renvoie :
 Ma moyenne est de 15
 Ma moyenne est de 14
 ```
+
+## Les constructeurs
+Cette méthode est la plus largement utilisée pour faire de l'héritage en javascript. La syntaxe est la suivante (par convention on met une majuscule au nom de la **classe** pour la différencier des **instances**) :
+
+```
+var Eleve = function(nom, notes) {
+  this.nom = nom,
+  this.notes = notes,
+  this.moyenne = function() {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const sommeNotes = this.notes.reduce(reducer)
+    console.log("Ma moyenne est de " + sommeNotes/this.notes.length)
+  }
+}
+
+var jean = new Eleve("Jean", [10, 20])
+var pierre = new Eleve("Pierre", [12, 16])
+
+jean.moyenne()
+pierre.moyenne()
+```
+fonctionne et renvoie :
+
+```
+Ma moyenne est de 15
+Ma moyenne est de 14
+```
