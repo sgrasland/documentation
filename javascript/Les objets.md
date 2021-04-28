@@ -138,7 +138,7 @@ Généralement, on utilisera la syntaxe suivante pour faire de l'héritage en ja
 ```
 var Eleve = function(nom, notes) {
   this.nom = nom,
-  this.notes = notes,
+  this.notes = notes
 }
 
 Eleve.prototype.moyenne = function () {
