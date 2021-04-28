@@ -118,7 +118,7 @@ On pourrait également définir la classe `Eleve`, **qui est en réalité une fo
 On peut utiliser l'attribut `prototype`de la fonction `Eleve` pour définir une nouvelle méthode accessible par tous les objets instanciés à partir d'`Eleve` de la façon suivante :
 
 ```
-Eleve.prototype.leverLaMain = function () {
+Eleve.prototype.leveLaMain = function () {
   console.log(this.nom + " lève la main !")
 }
 ```
