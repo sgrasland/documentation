@@ -60,9 +60,27 @@ Ma moyenne est de 14
 
 A noter qu'en pratique **on n'utilisera jamais directement cette méthode pour faire de l'héritage en javascript**.
 
-## L'héritage en pratique
-En pratique, pour faire de l'héritage en javascript, il existe plusieurs méthodes.
+## `Object.create()`
+Cette méthode n'est généralement pas non plus utilisée, mais elle permet d'obtenir le même résultat sans accéder directement à l'attribut `__proto__` :
 
-### `Object.create()`
+```
+[...]
 
-L'exemple suivant illustre comment utiliser `Object.create()` pour faire de l'héritage :
+var jean = Object.create(eleve)
+jean.nom = "Jean"
+jean.notes = [10, 20]
+
+var pierre = Object.create(eleve)
+jean.nom = "Pierre"
+jean.notes = [12, 16]
+
+jean.moyenne()
+pierre.moyenne()
+```
+
+fonctionne et renvoie :
+
+```
+Ma moyenne est de 15
+Ma moyenne est de 14
+```
