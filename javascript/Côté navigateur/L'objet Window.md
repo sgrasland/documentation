@@ -41,6 +41,51 @@ console.log(userConfirmed)
 ouvre une pop-up avec un bouton *OK/Annuler*. Le code qui suit un `window.confirm()` n'est exécute que lorsque l'utilisateur a cliqué sur le bouton *OK* ou *Annuler*.
 La valeur renvoyée est `true` si l'utilisateur a cliqué sur *OK* et `false` s'il a cliqué sur *Annuler*.
 
-### `setInterval`
+### `setInterval` / `clearInterval`
 
+```
+var test = function() {
+  console.log('test')
+}
+window.setInterval(test, 1000)
+```
 
+exécute la fonction `test` chaque seconde au bout d'une seconde. C'est une fonction **asynchrone**, donc le code situé juste après sera exécuté avant la première exécution de `test` qui aura lieu au bout d'une seconde.
+
+Grâce aux **closures** on peut par exemple créer un minuteur :
+
+```
+var compteur = 0
+var minuteur = function() {
+  console.log(compteur)
+  compteur++
+}
+window.setInterval(test, 1000)
+```
+
+La fonction `setInterval` renvoie un `intervalId` qui peut être passé à la fonction `clearInterval`. La fonction `clearInterval` permet de stopper l'exécution de la fonction `clearInterval` :
+
+```
+var compteur = 0
+var minuteur = function() {
+  console.log(compteur)
+  compteur++
+  if (compteur === 10) {
+    window.clearInterval(intervalId)
+  }
+}
+var intervalId = window.setInterval(minuteur, 1000)
+```
+
+### `setTimeout` / `clearTimeout`
+
+```
+var test = function() {
+  console.log('test')
+}
+window.setTimeout(test, 1000)
+```
+
+exécute la fonction `test` au bout d'une seconde. C'est également une fonction **asynchrone**. avec `clearTimeout`, ces deux méthodes fonctionnent sur le même principe que  `setInterval` et `clearInterval`.
+
+### ``
