@@ -33,28 +33,30 @@ Cette méthode est similaire à `document.querySelector()` sauf qu'elle retourne
 Exemple :
 - `document.querySelectorAll('#toto p')` renvoie un tableau contenant tous les `<p>` enfants de l'élément identifié par l'Id `'toto'`
 
-## `children` et `childNodes`
+## `children/childNodes`, `parentElement`, `nextElementSibling`
 
-On peut récupérer les enfants d'un noeud avec la propriété `children` ou `childNodes` d'un élément. Attention tout de même :
-- `children` renvoie les **éléments HTML** enfants de l'élément donné
+On peut récupérer les éléments proches d'un élément HTML avec les propriétés suivantes :
+- `children` renvoie les **éléments HTML** enfants de l'élément donné.
 - `childNodes` renvoie **tous les éléments** endants de l'élément donné, y compris les éléments **text**.
+- `parentElement` renvoie **le parent** de l'élément donné.
+- `nextElementSibling`/`previousElementSibling` renvoie l'élément **suivant** ou **précédent** l'élément donné.
 
 Prenons par exemple le code HTML suivant :
 
 ```
 <ul>
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
+  <li id='1'>1</li>
+  <li id='2'>2</li>
+  <li id='3'>3</li>
 </ul>
 ```
 
-- `document.querySelector('ul').children` renvoie `[<li>1</li>, <li>2</li>, <li>3</li>]`
-- `document.querySelector('ul').childNodes` renvoie `[#text, <li>1</li>, #text, <li>2</li>, #text, <li>3</li>, #text]`
-
-De même :
+- `document.querySelector('ul').children` renvoie `[<li id='1'>1</li>, <li id='2'>2</li>, <li id='3'>3</li>]`
+- `document.querySelector('ul').childNodes` renvoie `[#text, <li id='1'>1</li>, #text, <li id='2'>2</li>, #text, <li id='3'>3</li>, #text]`
 - `document.querySelector('ul').firstChild` renvoie `#text`
-- `document.querySelector('ul').firstElementChild` renvoie `<li>1</li>`
+- `document.querySelector('ul').firstElementChild` renvoie `<li id='1'>1</li>`
+- `document.querySelector('#1').parentElement` renvoie `<ul>...</ul>`
+- `document.querySelector('#1').nextElementSibling` renvoie `<li id='2'>2</li>`
 
 # Modifier un élément
 
