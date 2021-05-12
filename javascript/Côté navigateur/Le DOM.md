@@ -4,19 +4,19 @@ est disponible sur [la documentation MDN](https://developer.mozilla.org/fr/docs/
 
 # Accéder à des éléments du DOM
 
-## document.getElementById()
+## `document.getElementById()`
 
 `document.getElementById('toto')` renvoie l'élément du DOM identifié par l'Id `'toto'`.
 
-## document.getElementsByClassName()
+## `document.getElementsByClassName()`
 
 `document.getElementsByClassName('tutu')` renvoie un tableau contenant tous les éléments du DOM ayant la classe `'tutu'`.
 
-## document.getElementsByTagName()
+## `document.getElementsByTagName()`
 
 `document.getElementsByTagName('p')` renvoie un tableau contenant tous les éléments du DOM qui sont des `<p>`.
 
-## document.querySelector()
+## `document.querySelector()`
 
 Cette méthode est plus générique et peut se substituer aux 3 méthodes précédentes.
 Elle permet de sélectionner un élément du DOM correspondant au **premier résultat** renvoyé par le **sélecteur CSS** qu'on lui passe.</br>
@@ -27,31 +27,13 @@ Exemples :
 - `document.querySelector('p')` renvoie le premier élément du DOM rencontré qui est un `<p>`.
 - `document.querySelector('#toto p')` renvoie le premier élément du DOM rencontré qui est un `<p>` enfant de l'élément identifié par l'Id `'toto'`
 
-## document.querySelectorAll()
+## `document.querySelectorAll()`
 
 Cette méthode est similaire à `document.querySelector()` sauf qu'elle retourne un **tableau** contenant l'ensemble des éléments identifiés par le **sélecteur CSS** qu'on lui passe.</br>
 Exemple :
 - `document.querySelectorAll('#toto p')` renvoie un tableau contenant tous les `<p>` enfants de l'élément identifié par l'Id `'toto'`
 
-# Modifier un élément
-
-## Changer la classe
-
-On peut changer la classe de l'élément `'toto'` avec `document.querySelector('#toto').className = 'titi'`.
-Ainsi, l'élément d'Id `'toto'` aura désormais la classe `'titi'`.</br></br>
-De manière plus moderne, on peut également utiliser le `'classList'` à la place du `'className'` pour accéder à la liste des classes d'un élément et intéragir avec de manière plus simple. Par exemple, `document.querySelector('#toto').classList.add('titi')` ajoute la classe `'titi'` à l'élément d'Id `'toto'`.
-
-## Changer le style
-
-On récupère le style de l'élément `'toto'` avec `document.querySelector('#toto').style` qui renvoie un élément **CSSStyleDeclaration** contenant tous les styles CSS de l'élément (tous les styles que l'élément n'a pas sont aussi représentés, mais sont vides).</br></br>
-Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `document.querySelector('#toto').style.fontSize = '20px'`.
-
-## Changer le contenu d'un élément
-
-On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut</strong>'`.</br></br>
-Si on souhaite modifier uniquement le texte contenu dans un élément sans toucher aux balises HTML, on peut utiliser `document.querySelector('#toto').textContent = 'Salut'`.
-
-# Récupérer les enfants d'un noeud
+## `children` et `childNodes`
 
 On peut récupérer les enfants d'un noeud avec la propriété `children` ou `childNodes` d'un élément. Attention tout de même :
 - `children` renvoie les **éléments HTML** enfants de l'élément donné
@@ -73,3 +55,21 @@ Prenons par exemple le code HTML suivant :
 De même :
 - `document.querySelector('ul').firstChild` renvoie `#text`
 - `document.querySelector('ul').firstElementChild` renvoie `<li>1</li>`
+
+# Modifier un élément
+
+## Changer la classe
+
+On peut changer la classe de l'élément `'toto'` avec `document.querySelector('#toto').className = 'titi'`.
+Ainsi, l'élément d'Id `'toto'` aura désormais la classe `'titi'`.</br></br>
+De manière plus moderne, on peut également utiliser le `'classList'` à la place du `'className'` pour accéder à la liste des classes d'un élément et intéragir avec de manière plus simple. Par exemple, `document.querySelector('#toto').classList.add('titi')` ajoute la classe `'titi'` à l'élément d'Id `'toto'`.
+
+## Changer le style
+
+On récupère le style de l'élément `'toto'` avec `document.querySelector('#toto').style` qui renvoie un élément **CSSStyleDeclaration** contenant tous les styles CSS de l'élément (tous les styles que l'élément n'a pas sont aussi représentés, mais sont vides).</br></br>
+Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `document.querySelector('#toto').style.fontSize = '20px'`.
+
+## Changer le contenu d'un élément
+
+On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut</strong>'`.</br></br>
+Si on souhaite modifier uniquement le texte contenu dans un élément sans toucher aux balises HTML, on peut utiliser `document.querySelector('#toto').textContent = 'Salut'`.
