@@ -37,5 +37,6 @@ Exemple :
 
 ## Changer la classe
 
-On peut changer la classe de tous les éléments ayant pour classe `'tutu'` avec `document.querySelector('.tutu').className = 'titi'`.
-Ainsi, tous les éléments de classe `'tutu'` auront désormais la classe `'titi'`.
+On peut changer la classe des éléments ayant pour classe `'tutu'` avec `document.querySelectorAll('.tutu').className = 'tutu titi'`.
+Ainsi, tous les éléments de classe `'tutu'` auront désormais les classes `'tutu'` et `'titi'`.</br></br>
+De manière plus moderne, on peut également utiliser le `'classList'` à la place du `'className'` pour accéder à la liste des classes d'un élément et intéragir avec de manière plus simple. Par exemple, `document.querySelectorAll('.tutu').classList.add('titi')` ajoute la classe `'titi'` aux éléments de classe `'tutu'`.
