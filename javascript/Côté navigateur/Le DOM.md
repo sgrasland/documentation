@@ -37,9 +37,9 @@ Exemple :
 
 ## Changer la classe
 
-On peut changer la classe des éléments ayant pour classe `'tutu'` avec `document.querySelectorAll('.tutu').className = 'tutu titi'`.
-Ainsi, tous les éléments de classe `'tutu'` auront désormais les classes `'tutu'` et `'titi'`.</br></br>
-De manière plus moderne, on peut également utiliser le `'classList'` à la place du `'className'` pour accéder à la liste des classes d'un élément et intéragir avec de manière plus simple. Par exemple, `document.querySelectorAll('.tutu').classList.add('titi')` ajoute la classe `'titi'` aux éléments de classe `'tutu'`.
+On peut changer la classe de l'élément `'toto'` avec `document.querySelector('#toto').className = 'titi'`.
+Ainsi, l'élément d'Id `'toto'` aura désormais la classe `'titi'`.</br></br>
+De manière plus moderne, on peut également utiliser le `'classList'` à la place du `'className'` pour accéder à la liste des classes d'un élément et intéragir avec de manière plus simple. Par exemple, `document.querySelector('#toto').classList.add('titi')` ajoute la classe `'titi'` à l'élément d'Id `'toto'`.
 
 ## Changer le style
 
@@ -49,4 +49,20 @@ Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `doc
 ## Changer le contenu d'un élément
 
 On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut</strong>'`.</br></br>
-Si on souhaite modifier uniquement le texte contenu dans un élément sans toucher aux balises HTML, on peut utiliser `document.querySelector('#toto').innerText = 'Salut'`.
+Si on souhaite modifier uniquement le texte contenu dans un élément sans toucher aux balises HTML, on peut utiliser `document.querySelector('#toto').textContent = 'Salut'`.
+
+# Récupérer les enfants d'un noeud
+
+On peut récupérer les enfants d'un noeud avec la propriété `children` ou `childNodes` d'un élément. Attention tout de même :
+- `children` renvoie les **éléments HTML** enfants de l'élément donné
+- `childNodes` renvoie **tous les éléments** endants de l'élément donné, y compris les éléments **text**.
+
+Prenons par exemple le code HTML suivant :
+
+```
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+```
