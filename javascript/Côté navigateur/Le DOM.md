@@ -66,3 +66,10 @@ Prenons par exemple le code HTML suivant :
   <li>3</li>
 </ul>
 ```
+
+- `document.querySelector('ul').children` renvoie `[<li>1</li>, <li>2</li>, <li>3</li>]`
+- `document.querySelector('ul').childNodes` renvoie `[#text, <li>1</li>, #text, <li>2</li>, #text, <li>3</li>, #text]`
+
+De même :
+- `document.querySelector('ul').firstChild` renvoie `#text`
+- `document.querySelector('ul').firstElementChild` renvoie `<li>1</li>`
