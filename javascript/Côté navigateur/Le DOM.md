@@ -48,4 +48,5 @@ Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `doc
 
 ## Changer le contenu d'un élément
 
-On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut !</strong>'`
+On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut</strong>'`.</br></br>
+Si on souhaite modifier uniquement le texte contenu dans un élément sans toucher aux balises HTML, on peut utiliser `document.querySelector('#toto').innerText = 'Salut'`.
