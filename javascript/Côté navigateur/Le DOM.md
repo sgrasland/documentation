@@ -45,3 +45,7 @@ De manière plus moderne, on peut également utiliser le `'classList'` à la pla
 
 On récupère le style de l'élément `'toto'` avec `document.querySelector('#toto').style` qui renvoie un élément **CSSStyleDeclaration** contenant tous les styles CSS de l'élément (tous les styles que l'élément n'a pas sont aussi représentés, mais sont vides).</br></br>
 Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `document.querySelector('#toto').style.fontSize = '20px'`.
+
+## Changer le contenu d'un élément
+
+On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut !</strong>'`
