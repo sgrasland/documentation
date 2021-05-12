@@ -40,3 +40,8 @@ Exemple :
 On peut changer la classe des éléments ayant pour classe `'tutu'` avec `document.querySelectorAll('.tutu').className = 'tutu titi'`.
 Ainsi, tous les éléments de classe `'tutu'` auront désormais les classes `'tutu'` et `'titi'`.</br></br>
 De manière plus moderne, on peut également utiliser le `'classList'` à la place du `'className'` pour accéder à la liste des classes d'un élément et intéragir avec de manière plus simple. Par exemple, `document.querySelectorAll('.tutu').classList.add('titi')` ajoute la classe `'titi'` aux éléments de classe `'tutu'`.
+
+## Changer le style
+
+On récupère le style de l'élément `'toto'` avec `document.querySelector('#toto').style` qui renvoie un élément **CSSStyleDeclaration** contenant tous les styles CSS de l'élément (tous les styles que l'élément n'a pas sont aussi représentés, mais sont vides).</br></br>
+Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `document.querySelector('#toto').style.fontSize = '20px'`.
