@@ -75,3 +75,29 @@ Par exemple, on peut modifier la **font-size** de l'élément `'toto'` avec `doc
 
 On peut récupérer le contenu de l'élément `'toto'` avec `document.querySelector('#toto').innerHTML`. On peut par exemple remplacer son contenu avec `document.querySelector('#toto').innerHTML = '<strong>Salut</strong>'`.</br></br>
 Si on souhaite modifier uniquement le texte contenu dans un élément sans toucher aux balises HTML, on peut utiliser `document.querySelector('#toto').textContent = 'Salut'`.
+
+## Supprimer/Déplacer/Copier/Ajouter/Remplacer un élément
+
+Prenons le code HTML suivant :
+
+```
+<ul>
+  <li id='1'>1</li>
+  <li id='2'>2</li>
+  <li id='3'>3</li>
+</ul>
+<div>
+</div>
+```
+
+et le code Javascript suivant :
+```
+var li = document.querySelector('li');
+```
+
+- On peut **supprimer** le premier `<li>` avec `document.querySelector('ul').removeChild(li)`. Cette méthode retourne l'élément supprimé.
+- On peut **déplacer** le premier `<li>` dans le `<div>` avec `document.querySelector('div').appendChild(li)`. Cette méthode retourne l'élément déplacé.
+- On peut **copier** le premier `<li>` dans le `<div>` avec `var newLi = li.cloneNode(true)` (*true* indique que l'on souhaite aussi copier les enfants de *li*) puis `document.querySelector('div').appendChild(newLi)`.
+- On peut **ajouter** un nouvel élément à la liste avec `var newLi = document.createElement('li')` puis `newLi.textContent = '4'` puis `document.querySelector('ul').appendChild(newLi)`.
+- On peut **remplacer** un élément par un autre avec `document.querySelector('ul').replaceChild(newLi, li)`.
+
