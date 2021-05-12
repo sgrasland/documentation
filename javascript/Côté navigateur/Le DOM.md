@@ -32,3 +32,10 @@ Exemples :
 Cette méthode est similaire à `document.querySelector()` sauf qu'elle retourne un **tableau** contenant l'ensemble des éléments identifiés par le **sélecteur CSS** qu'on lui passe.</br>
 Exemple :
 - `document.querySelectorAll('#toto p')` renvoie un tableau contenant tous les `<p>` enfants de l'élément identifié par l'Id `'toto'`
+
+# Modifier un élément
+
+## Changer la classe
+
+On peut changer la classe de tous les éléments ayant pour classe `'tutu'` avec `document.querySelector('.tutu').className = 'titi'`.
+Ainsi, tous les éléments de classe `'tutu'` auront désormais la classe `'titi'`.
