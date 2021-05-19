@@ -33,8 +33,29 @@ p.addEventListener('click', function(event){
   console.log(event)
 })
 ```
+Ou encore si on veut extraire la définition de la fonction de l'eventListener :
+```
+const p = document.querySelector('p')
+const setColor = function(elem, color) {
+  elem.style.setProperty('color', color)
+}
+const onClick = function(event) {
+  setColor(this, 'blue')
+  console.log(event)
+}
+p.addEventListener('click', onClick)
+```
 
 > Dans la console de Google Chrome, on peut visualiser la liste des évènement écoutés par un élément donné en cliquant sur le sous-onglet **Event Listeners** dans le menu **Elements**
+
+# `removeEventListener()`
+
+Cette méthode permet de retirer une fonction ajoutée via un `addEventListener()` sur un élément :
+
+```
+p.addEventListener('click', onClick)
+p.removeEventListener('click', onClick)
+```
 
 # `event.preventDefault()`
 
