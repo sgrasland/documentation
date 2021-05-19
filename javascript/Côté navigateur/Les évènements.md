@@ -3,6 +3,7 @@
 En Javascript, on peut réagir à des évènements grâce à la méthode `addEventListener` qui s'utilise sur un élément du DOM. Cette méthode prend 2 paramètres :
 - Le type d'évènement auquel on souhaite réagir
 - La fonction à exécuter lorsque l'évènement survient
+
 Exemple :
 ```
 const p = document.querySelector('p')
@@ -33,13 +34,15 @@ p.addEventListener('click', function(event){
 })
 ```
 
+> Dans la console de Google Chrome, on peut visualiser la liste des évènement écoutés par un élément donné en cliquant sur le sous-onglet **Event Listeners** dans le menu **Elements**
+
 # `event.preventDefault()`
 
 La méthode `preventDefault()` permet de ne pas effectuer l'action par défaut induite par l'évènement. Par exemple :
 - Si on clique sur un bouton pour soumettre un formulaire, `preventDefault()` annule la soumission du formulaire
 - Si on clique sur un lien vers un site externe, `preventDefault()` annule la redirection vers ce site
 
-`preventDefault()` annule également la propagation de l'évènement dans les éléments enfants de celui sur lequel l'`eventListener` a été ajouté.
+`preventDefault()` annule également la propagation de l'évènement dans les éléments parents de celui sur lequel l'`eventListener` a été ajouté. On peut également utiliser la méthode `stopPropagation()` si on souhaite uniquement annuler la propagation de l'évènement.
 
 Exemple d'utilisation :
 ```
